@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ja">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Voice Queue 設定</title><link rel="stylesheet" href="options.css"></head>
+<body>
+  <main>
+    <header><p>AI Response Voice Queue</p><h1>読み上げ設定</h1><span>設定はこのブラウザ内だけに保存されます。</span></header>
+    <form id="form">
+      <section>
+        <h2>音声</h2>
+        <label>音声<select id="voiceName"><option value="">ブラウザ標準</option></select></label>
+        <label>速度 <output id="rateValue"></output><input id="rate" type="range" min="0.6" max="2" step="0.05"></label>
+        <label>高さ <output id="pitchValue"></output><input id="pitch" type="range" min="0.5" max="2" step="0.05"></label>
+        <label>音量 <output id="volumeValue"></output><input id="volume" type="range" min="0" max="1" step="0.05"></label>
+      </section>
+      <section>
+        <h2>タイミング</h2>
+        <label>操作後の待機時間（秒）<input id="inactivityDelaySeconds" type="number" min="0" max="60" step="0.5"></label>
+        <label>回答間の間隔（秒）<input id="minGapSeconds" type="number" min="0" max="20" step="0.1"></label>
+        <label>最大読み上げ文字数<input id="maxChars" type="number" min="100" max="5000" step="100"></label>
+        <label class="check"><input id="pauseForOtherAudio" type="checkbox"> 他タブが音声再生中なら待機する</label>
+        <label class="check"><input id="announceSource" type="checkbox"> 読み上げ前にサービス名を案内する</label>
+      </section>
+      <button type="submit">設定を保存</button><span id="saved" role="status"></span>
+    </form>
+  </main>
+  <script src="options.js"></script>
+</body>
+</html>
