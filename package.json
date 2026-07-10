@@ -1,0 +1,14 @@
+{
+  "name": "ai-response-voice-queue",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Chrome extension that queues and reads AI responses without audio conflicts",
+  "scripts": {
+    "lint": "node scripts/lint.mjs",
+    "test": "node --test",
+    "build": "node scripts/build.mjs",
+    "build:web": "node scripts/build.mjs --web"
+  },
+  "engines": { "node": ">=20" }
+}
